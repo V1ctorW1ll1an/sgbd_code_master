@@ -1,8 +1,8 @@
 <?php
 
+require 'config.php';
 include 'artigos.php';
-
-$artigos = new Artigo();
+$artigos = new Artigo($mysql);
 
 ?>
 
@@ -25,10 +25,14 @@ $artigos = new Artigo();
                 </a>
             </h2>
             <p>
-                <?php echo $artigo['descricao'] ?>
+                <?php echo $artigo['conteudo'] ?>
             </p>
         <?php endforeach ?>
     </div>
 </body>
+
+<script src="index.js">
+
+</script>
 
 </html>
